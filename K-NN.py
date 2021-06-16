@@ -49,6 +49,8 @@ def Kumeleme(OU):
         print("  ", count+1, "          ", kume+1)
     return Kumeler
 
+Kumeler = Kumeleme(Oklid(merkezler,noktalar))
+
 def Merkez(Kumeler, noktalar):
     print("\n------------------------------------------------")
     print("MERKERLERİN KOORDİNAT HESABI")
@@ -62,6 +64,8 @@ def Merkez(Kumeler, noktalar):
         m[0] = m[0] / Kumeler.count(count)
         m[1] = m[1] / Kumeler.count(count)
     return Merkezler
+
+Merkezler = Merkez(Kumeler, noktalar)
 
 def printMerkez(Kumeler, noktalar, Merkezler):
     yaziSirasi = [[] for _ in range(len(set(Kumeler)))]
@@ -91,6 +95,4 @@ def printMerkez(Kumeler, noktalar, Merkezler):
             print(")]")
             print("=>", Merkezler[c1],"\n")
 
-Kumeler = Kumeleme(Oklid(merkezler,noktalar))
-Merkezler = Merkez(Kumeler, noktalar)
 printMerkez(Kumeler,noktalar,Merkezler)
