@@ -1,11 +1,13 @@
 import math
 
-def truncate(n):
-    return int(n * 100) / 100
-
+# Nokta ve merkez sayısı algoritmayı etkilemez.
+# Verilen ikili değerler noktalar[] listesine, merkez olarak seçilen noktalar ise merkezler[] listesine girilecektir.
+# Her iki soruyuda birini yorum satırı yaparak değiştirip deneyebilirsiniz.
+# FİNAL Sorusu
 noktalar = [[2,10], [2,5], [8,4], [5,8], [7,5], [6,4], [1,2], [4,9]]
 merkezler = [[2,10], [5,8], [1,2]]
 
+# Vize Sorusu
 #noktalar = [[-4,-3], [6,5], [1,-7], [-4,-6],[4,6],[-1,-5],[-3,0],[3,0]]
 #merkezler = [[-3,0],[3,0]]
 
@@ -20,7 +22,7 @@ def Oklid( MS , NS):
         i = 0
         for n2 in NS:
             i+=1
-            uzaklik = truncate(math.sqrt(((int(n2[0]) - int(n1[0])) ** 2) + ((int(n2[1]) - int(n1[1])) ** 2)))
+            uzaklik = round(math.sqrt(((int(n2[0]) - int(n1[0])) ** 2) + ((int(n2[1]) - int(n1[1])) ** 2)),3)
             print(i, ". Nokta için: [ (", end="")
             print("(", n2[0], ")",end="",sep="") if n2[0] <0 else print(n2[0],end="")
             print(" - ", end="")
@@ -49,8 +51,6 @@ def Kumeleme(OU):
         print("  ", count+1, "          ", kume+1)
     return Kumeler
 
-Kumeler = Kumeleme(Oklid(merkezler,noktalar))
-
 def Merkez(Kumeler, noktalar):
     print("\n------------------------------------------------")
     print("MERKERLERİN KOORDİNAT HESABI")
@@ -61,11 +61,9 @@ def Merkez(Kumeler, noktalar):
         Merkezler[Kumeler[count]][1] += n[1]
 
     for count, m in enumerate(Merkezler):
-        m[0] = m[0] / Kumeler.count(count)
-        m[1] = m[1] / Kumeler.count(count)
+        m[0] = round(m[0] / Kumeler.count(count),3)
+        m[1] = round(m[1] / Kumeler.count(count),3)
     return Merkezler
-
-Merkezler = Merkez(Kumeler, noktalar)
 
 def printMerkez(Kumeler, noktalar, Merkezler):
     yaziSirasi = [[] for _ in range(len(set(Kumeler)))]
@@ -94,5 +92,9 @@ def printMerkez(Kumeler, noktalar, Merkezler):
                     print(" + (",m[1],")", end="", sep="") if m[1] < 0 else print(" +", m[1], end="")
             print(")]")
             print("=>", Merkezler[c1],"\n")
+
+Kumeler = Kumeleme(Oklid(merkezler,noktalar))
+
+Merkezler = Merkez(Kumeler, noktalar)
 
 printMerkez(Kumeler,noktalar,Merkezler)
