@@ -64,7 +64,7 @@ H = hassasiyetHesapla(DP,YN)
 
 def F_OlcutuHesapla(K, H):
     F_Olcutu = round(2*(K * H) / (K + H),3)
-    print("\nHASSASİYET HESABI:")
+    print("\nF-ÖLÇÜTÜ HESABI:")
     print("F-Ölçütü = 2 x [(K x H) / (K + H)]")
     print("         = 2 x [({} x {}) / ({} + {})]".format(K, H, K, H))
     print("         = {} / {}".format(2 * K * H, K + H))

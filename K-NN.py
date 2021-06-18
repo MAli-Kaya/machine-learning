@@ -3,34 +3,38 @@ import math
 # Nokta ve merkez sayısı algoritmayı etkilemez.
 # Verilen ikili değerler noktalar[] listesine, merkez olarak seçilen noktalar ise merkezler[] listesine girilecektir.
 # Her iki soruyuda birini yorum satırı yaparak değiştirip deneyebilirsiniz.
+
+"""
+#Vize Sorusu
+noktalar = [[-4,-3], [6,5], [1,-7], [-4,-6],[4,6],[-1,-5],[-3,0],[3,0]]
+merkezler = [[-3,0],[3,0]]
+"""
+
 # FİNAL Sorusu
 noktalar = [[2,10], [2,5], [8,4], [5,8], [7,5], [6,4], [1,2], [4,9]]
 merkezler = [[2,10], [5,8], [1,2]]
 
-# Vize Sorusu
-#noktalar = [[-4,-3], [6,5], [1,-7], [-4,-6],[4,6],[-1,-5],[-3,0],[3,0]]
-#merkezler = [[-3,0],[3,0]]
 
 def Oklid( MS , NS):
     toplamUzakliklar = []
     print("\n------------------------------------------------")
-    print("ÖKLİD UZAKLIĞI HEABI:")
+    print("ÖKLİD UZAKLIĞI HESABI:")
     print("------------------------------------------------")
     for n1 in MS:
-        print("\n", n1, 'Merkezi için öklid uzaklık hesabı: \n')
+        print("\n",n1, 'Merkezi için öklid uzaklık hesabı: \n')
         uzakliklar = []
         i = 0
         for n2 in NS:
             i+=1
             uzaklik = round(math.sqrt(((int(n2[0]) - int(n1[0])) ** 2) + ((int(n2[1]) - int(n1[1])) ** 2)),3)
             print(i, ". Nokta için: [ (", end="")
-            print("(", n2[0], ")",end="",sep="") if n2[0] <0 else print(n2[0],end="")
+            print(n2[0],end="",sep="") if n2[0] <0 else print(" ",n2[0],end="",sep="")
             print(" - ", end="")
             print("(", n1[0], ")",end="",sep="") if n1[0] <0 else print(n1[0],end="")
             print(')^2  + (',end="")
-            print("(", n2[1], ")",end="", sep="") if n2[1] <0 else print(n2[1],end="")
+            print(n2[1],end="",sep="") if n2[1] <0 else print(" ",n2[1],end="",sep="")
             print(' - ',end="")
-            print("(", n1[1], ")",end="", sep="") if n1[1] <0 else print(n1[1],end="",)
+            print("(", n1[1], ")",end="",sep="") if n1[1] <0 else print(n1[1],end="")
             print(')^2  ]^1/2 =', uzaklik, sep="")
             uzakliklar.append(uzaklik)
 
@@ -53,7 +57,7 @@ def Kumeleme(OU):
 
 def Merkez(Kumeler, noktalar):
     print("\n------------------------------------------------")
-    print("MERKERLERİN KOORDİNAT HESABI")
+    print("MERKEZLERİN KOORDİNAT HESABI")
     print("------------------------------------------------\n")
     Merkezler = [[0,0] for _ in range(len(set(Kumeler)))]
     for count, n in enumerate(noktalar):
@@ -80,16 +84,16 @@ def printMerkez(Kumeler, noktalar, Merkezler):
             print("=> [(", end='')
             for c2, m in enumerate(y):
                 if c2 == 0:
-                    print("(", m[0],")", end="", sep="") if m[0] < 0 else print(m[0], end="")
+                    print(m[0], end="", sep="")
                 else:
-                    print(" + (",m[0],")", end="", sep="") if m[0] < 0 else print(" +", m[0], end="")
+                    print(" - ",abs(m[0]), end="", sep="") if m[0] < 0 else print(" +", m[0], end="")
             print("),(", end="")
 
             for c2, m in enumerate(y):
                 if c2 == 0:
-                    print("(", m[1],")", end="", sep="") if m[1] < 0 else print(m[1], end="")
+                    print(m[1], end="", sep="")
                 else:
-                    print(" + (",m[1],")", end="", sep="") if m[1] < 0 else print(" +", m[1], end="")
+                    print(" - ",abs(m[1]), end="", sep="") if m[1] < 0 else print(" +", m[1], end="")
             print(")]")
             print("=>", Merkezler[c1],"\n")
 
