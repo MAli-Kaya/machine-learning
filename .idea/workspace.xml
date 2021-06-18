@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1afdd58-efd4-4a7c-8cef-e8125ca16858" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Lagrange-Multiplier.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Accuracy-Calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Accuracy-Calculator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K-NN.py" beforeDir="false" afterPath="$PROJECT_DIR$/K-NN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Linear-Regression.py" beforeDir="false" afterPath="$PROJECT_DIR$/Linear-Regression.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lagrange-Multiplier.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lagrange-Multiplier.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Accuracy-Calculator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="66" column="21" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+            <state relative-caret-position="34">
+              <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -47,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/Lagrange-Multiplier.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+              <caret line="8" column="84" lean-forward="true" selection-start-line="8" selection-start-column="84" selection-end-line="8" selection-end-column="84" />
             </state>
           </provider>
         </entry>
@@ -75,9 +73,9 @@
       <list>
         <option value="$PROJECT_DIR$/venv/Accuracy-Calculator.py" />
         <option value="$PROJECT_DIR$/Linear-Regression.py" />
-        <option value="$PROJECT_DIR$/Accuracy-Calculator.py" />
         <option value="$PROJECT_DIR$/K-NN.py" />
         <option value="$PROJECT_DIR$/Lagrange-Multiplier.py" />
+        <option value="$PROJECT_DIR$/Accuracy-Calculator.py" />
       </list>
     </option>
   </component>
@@ -301,18 +299,33 @@
       <option name="project" value="LOCAL" />
       <updated>1624005327496</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Lagrange Multiplier Method">
+      <created>1624029660773</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1624029660773</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Genel Düzenlemeler">
+      <created>1624033739905</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1624033739905</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10766182" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31400284" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27864215" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -369,7 +382,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="K-NN Algorithm" />
     <MESSAGE value="Accuracy Calculator" />
-    <option name="LAST_COMMIT_MESSAGE" value="Accuracy Calculator" />
+    <MESSAGE value="Lagrange Multiplier Method" />
+    <MESSAGE value="Genel Düzenlemeler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Genel Düzenlemeler" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/K-NN.py">
@@ -388,15 +403,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Accuracy-Calculator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="66" column="21" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lagrange-Multiplier.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+          <caret line="8" column="84" lean-forward="true" selection-start-line="8" selection-start-column="84" selection-end-line="8" selection-end-column="84" />
         </state>
       </provider>
     </entry>

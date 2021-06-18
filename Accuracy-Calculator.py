@@ -1,4 +1,6 @@
-
+#Algoritmanın çalışması için karmaşıklık matrisini girmeniz yeterli.
+#Matrisi doldurmak için DP, YP, YN ve DN değerlerini kendiniz bulmuş olmanız gereklidir.
+#Final Sorusu
 KarMatrix = [[965,20],
              [10,5]]
 

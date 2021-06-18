@@ -5,6 +5,9 @@ Algoritmanın çalışması için f ve g fonksiyonlarının girilmesi yeterlidir
 f için f(x,y)
 g için g(x,y) kısıt fonksiyonu
 
+NOT: Eğer LATEX kodlarını kullanmayı biliyorsanız; yorum satırı olarak duran 
+print_latex kodlarının yorumunu kaldırarak latex kodlarını ekrana yazdırabilirsiniz.
+
 video örneği:
 f = x**2 - 2*x + y**2 - y + 1.25
 g = x**2 + y**2 - 5
