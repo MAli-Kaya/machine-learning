@@ -1,104 +1,124 @@
 import math
+"""
+Vize Sorusu:
 
-# Nokta ve merkez sayısı algoritmayı etkilemez.
-# Verilen ikili değerler noktalar[] listesine, merkez olarak seçilen noktalar ise merkezler[] listesine girilecektir.
-# Her iki soruyuda birini yorum satırı yaparak değiştirip deneyebilirsiniz.
+veriler = [[32,1,"F"],
+           [40,1,"T"],
+           [16,0,"K"],
+           [34,0,"K"],
+           [55,1,"T"],
+           [40,1,"K"],
+           [20,0,"T"],
+           [15,1,"K"],
+           [55,0,"F"],
+           [15,1,"F"]]
+istenen = [15,0]
+k=3
 
 """
-#Vize Sorusu
-noktalar = [[-4,-3], [6,5], [1,-7], [-4,-6],[4,6],[-1,-5],[-3,0],[3,0]]
-merkezler = [[-3,0],[3,0]]
-"""
+# NOT:
+# Eğer 2 den fazla k değeri çeşiti yani k değerleri seçildikten sonra veriler[][3] değeri çeşiti 2 den fazlaysa
+# algoritmanın son 2 satırlık açıklaması çalışmayacaktır.
+# Yani sonuc() fonksiyonu çalışmayacaktır.
 
-# FİNAL Sorusu
-noktalar = [[2,10], [2,5], [8,4], [5,8], [7,5], [6,4], [1,2], [4,9]]
-merkezler = [[2,10], [5,8], [1,2]]
+# Videodaki örnek soru:
+# veriler tablodan diziye aşağıdaki gibi aktarılmalıdır.
+veriler = [[158,58,"M"],
+           [158,59,"M"],
+           [158,63,"M"],
+           [160,59,"M"],
+           [160,60,"M"],
+           [163,60,"M"],
+           [163,61,"M"],
+           [160,64,"L"],
+           [163,64,"L"],
+           [165,61,"L"],
+           [165,62,"L"],
+           [165,65,"L"],
+           [168,62,"L"],
+           [168,63,"L"],
+           [168,66,"L"],
+           [170,63,"L"],
+           [170,64,"L"],
+           [170,68,"L"]]
+
+istenen = [161,61] # istenen değere ait özellikler bu değişkene girilir.
+
+k = 5 # k değeri bu değişkene girilir.
 
 
-def Oklid( MS , NS):
-    toplamUzakliklar = []
+def oklid( eski_veriler , i):
     print("\n------------------------------------------------")
     print("ÖKLİD UZAKLIĞI HESABI:")
     print("------------------------------------------------")
-    for n1 in MS:
-        print("\n",n1, 'Merkezi için öklid uzaklık hesabı: \n')
-        uzakliklar = []
-        i = 0
-        for n2 in NS:
-            i+=1
-            uzaklik = round(math.sqrt(((int(n2[0]) - int(n1[0])) ** 2) + ((int(n2[1]) - int(n1[1])) ** 2)),3)
-            print(i, ". Nokta için: [ (", end="")
-            print(n2[0],end="",sep="") if n2[0] <0 else print(" ",n2[0],end="",sep="")
-            print(" - ", end="")
-            print("(", n1[0], ")",end="",sep="") if n1[0] <0 else print(n1[0],end="")
-            print(')^2  + (',end="")
-            print(n2[1],end="",sep="") if n2[1] <0 else print(" ",n2[1],end="",sep="")
-            print(' - ',end="")
-            print("(", n1[1], ")",end="",sep="") if n1[1] <0 else print(n1[1],end="")
-            print(')^2  ]^1/2 =', uzaklik, sep="")
-            uzakliklar.append(uzaklik)
+    print("formül: [(x2 - x1)^2 + (y2 - y1)^2]^(1/2)")
+    veriler = eski_veriler.copy()
+    for v in veriler:
+        print("\n[{}, {}] noktasına olan öklid uzaklığı hesabı: \n".format(v[0],v[1]))
+        uzaklik = round(math.sqrt(((int(i[0]) - int(v[0])) ** 2) + ((int(i[1]) - int(v[1])) ** 2)),3)
+        print("= [({} - {})^2 + ({} - {})^2]^(1/2)".format(i[0],v[0],i[1],v[1]))
+        print("= [({})^2 + ({})^2]^(1/2)".format(i[0] - v[0],i[1] - v[1]))
+        print("= ({} + {})^(1/2)".format((i[0] - v[0])**2, (i[1] - v[1])**2))
+        print("= ({})^(1/2)".format((i[0] - v[0]) ** 2 + (i[1] - v[1]) ** 2))
+        print("= {}".format(uzaklik))
+        v.append(uzaklik)
+    return veriler
 
-        toplamUzakliklar.append(uzakliklar)
-    return toplamUzakliklar
+yeniVeriler = oklid(veriler,istenen)
 
-def Kumeleme(OU):
-    print("\n------------------------------------------------")
-    print("NOKTALARIN AİT OLDUĞU KÜMELER")
-    print("------------------------------------------------\n")
-    print(" Nokta        Küme")
-    print("-------      -------")
-    Kumeler = []
-    FlipOU = zip(*OU)
-    for count, N in enumerate(FlipOU):
-        kume = N.index(min(N))
-        Kumeler.append(kume)
-        print("  ", count+1, "          ", kume+1)
-    return Kumeler
+def bubbleSort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            # veri listemiz 3 boyutlu olduğu için sıralama algoritmasındaki kod değişikliği
+            if arr[j][3] > arr[j + 1][3]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr
 
-def Merkez(Kumeler, noktalar):
-    print("\n------------------------------------------------")
-    print("MERKEZLERİN KOORDİNAT HESABI")
-    print("------------------------------------------------\n")
-    Merkezler = [[0,0] for _ in range(len(set(Kumeler)))]
-    for count, n in enumerate(noktalar):
-        Merkezler[Kumeler[count]][0] += n[0]
-        Merkezler[Kumeler[count]][1] += n[1]
+def kDegerleriniBul(eski_veriler,k):
+    veriler = eski_veriler.copy()
+    # Verilerin orjinal sıralarını belirliyoruz.
+    for i, v in enumerate(veriler):
+        v.append(i)
+    # Verileri öklid uzaklıklarına göre sıralıyoruz.
+    siraliVeriler = bubbleSort(veriler)
+    # k değerine göre en küçük değerleri alıyoruz.
+    kDegerleri = siraliVeriler[0:k]
+    return kDegerleri
 
-    for count, m in enumerate(Merkezler):
-        m[0] = round(m[0] / Kumeler.count(count),3)
-        m[1] = round(m[1] / Kumeler.count(count),3)
-    return Merkezler
-
-def printMerkez(Kumeler, noktalar, Merkezler):
-    yaziSirasi = [[] for _ in range(len(set(Kumeler)))]
-    for count1, y in enumerate(Kumeler):
-        for count2, n in enumerate(noktalar):
-            if count1 == count2:
-                yaziSirasi[y].append(n)
-
-    for c1, y in enumerate(yaziSirasi):
-        print("Merkez", c1 + 1, " hesabı:", sep="")
-        if len(y) == 1:
-            print("=>", Merkezler[c1],"\n")
+def kDegerleriniEkle(veriler,kDegerleri,K):
+    for i,v in enumerate(veriler):
+        v.append(0)
+    for i,k in enumerate(kDegerleri):
+        veriler[k[4]][5] = i+1
+    print("\nHesaplar tamamlandıktan sonra k={} olduğundan dolayı en küçük değerden başlayarak {} değer alınır.\n"
+          .format(K,K))
+    print("\tx\t\ty\t\tf(x,y)\t\tÖklid\t\tk")
+    print("  ---------------------------------------------")
+    for i,v in enumerate(veriler):
+        if v[5] != 0 :
+            print("\t{}\t\t{}\t\t{}\t\t\t{}\t\t{}*".format(v[0], v[1], v[2], v[3], v[5]))
         else:
-            print("=> [(", end='')
-            for c2, m in enumerate(y):
-                if c2 == 0:
-                    print(m[0], end="", sep="")
-                else:
-                    print(" - ",abs(m[0]), end="", sep="") if m[0] < 0 else print(" +", m[0], end="")
-            print("),(", end="")
+            print("\t{}\t\t{}\t\t{}\t\t\t{}".format(v[0], v[1], v[2], v[3]))
+kDegerleri = kDegerleriniBul(veriler,k)
+kDegerleriniEkle(veriler,kDegerleri,k)
 
-            for c2, m in enumerate(y):
-                if c2 == 0:
-                    print(m[1], end="", sep="")
-                else:
-                    print(" - ",abs(m[1]), end="", sep="") if m[1] < 0 else print(" +", m[1], end="")
-            print(")]")
-            print("=>", Merkezler[c1],"\n")
+def sonuc(kDegerleri):
+    k = kDegerleri.copy()
+    kd = list(map(list, zip(*kDegerleri)))
+    setf = list(set(kd[2]))
+    sonuc = [[],[]]
+    for i,f in enumerate(setf):
+        sonuc[i].append(f)
+        sonuc[i].append(kd[2].count(f))
+    print("\nEn yakın komşuların {} tanesi {} ve {} tanesi {} olarak tespit edilmiştir.\n"
+          .format(sonuc[0][1],sonuc[0][0],sonuc[1][1],sonuc[1][0]))
+    if sonuc[0][1] > sonuc[1][1]:
+        print("{} > {} olduğundan sonuç {} diyebiliriz.\n".format(sonuc[0][1],sonuc[1][1],sonuc[0][0]))
+    else:
+        print("{} > {} olduğundan sonuç {} diyebiliriz.\n".format(sonuc[1][1],sonuc[0][1],sonuc[1][0]))
 
-Kumeler = Kumeleme(Oklid(merkezler,noktalar))
-
-Merkezler = Merkez(Kumeler, noktalar)
-
-printMerkez(Kumeler,noktalar,Merkezler)
+try:
+    sonuc(kDegerleri)
+except:
+    print("\nSeçilen k değer çeşiti 2 den fazla olduğu için algoritmanın bulduğu çözüm buraya kadardır.")

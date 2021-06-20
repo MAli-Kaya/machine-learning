@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f1afdd58-efd4-4a7c-8cef-e8125ca16858" name="Default Changelist" comment="">
+    <list default="true" id="f1afdd58-efd4-4a7c-8cef-e8125ca16858" name="Default Changelist" comment="Genel Düzenlemeler">
+      <change afterPath="$PROJECT_DIR$/K-Means.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Accuracy-Calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Accuracy-Calculator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lagrange-Multiplier.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lagrange-Multiplier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K-NN.py" beforeDir="false" afterPath="$PROJECT_DIR$/K-NN.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,39 +13,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/K-NN.py">
+        <entry file="file://$PROJECT_DIR$/K-Means.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1700">
-              <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Linear-Regression.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="49" column="23" lean-forward="true" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Accuracy-Calculator.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="935">
+              <caret line="55" column="18" lean-forward="true" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Lagrange-Multiplier.py">
+        <entry file="file://$PROJECT_DIR$/K-NN.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="8" column="84" lean-forward="true" selection-start-line="8" selection-start-column="84" selection-end-line="8" selection-end-column="84" />
+              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -73,16 +55,18 @@
       <list>
         <option value="$PROJECT_DIR$/venv/Accuracy-Calculator.py" />
         <option value="$PROJECT_DIR$/Linear-Regression.py" />
-        <option value="$PROJECT_DIR$/K-NN.py" />
         <option value="$PROJECT_DIR$/Lagrange-Multiplier.py" />
         <option value="$PROJECT_DIR$/Accuracy-Calculator.py" />
+        <option value="$PROJECT_DIR$/K-Means.py" />
+        <option value="$PROJECT_DIR$/K-NN.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+    <option name="x" value="951" />
+    <option name="y" value="-9" />
+    <option name="width" value="978" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -144,8 +128,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Lagrange-Multiplier">
-    <configuration name="Accuracy-Calculator (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.K-NN (1)">
+    <configuration name="K-Means" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="machine-learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -157,7 +141,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Accuracy-Calculator.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/K-Means.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -166,7 +150,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Accuracy-Calculator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="K-NN (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="machine-learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -174,11 +158,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Muhammet Ali Kaya\Documents\GitHub\machine-learning\Accuracy-Calculator.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/K-NN.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -199,7 +183,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/K-NN.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Muhammet Ali Kaya\Documents\GitHub\machine-learning\K-Means.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -252,11 +236,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.K-NN (1)" />
+        <item itemvalue="Python.K-Means" />
         <item itemvalue="Python.Lagrange-Multiplier" />
         <item itemvalue="Python.K-NN" />
         <item itemvalue="Python.Linear-Regression" />
-        <item itemvalue="Python.Accuracy-Calculator (1)" />
-        <item itemvalue="Python.Accuracy-Calculator" />
       </list>
     </recent_temporary>
   </component>
@@ -313,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624033739905</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Genel Düzenlemeler">
+      <created>1624034381585</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1624034381585</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -325,7 +316,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27864215" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.042432815" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -387,13 +378,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Genel Düzenlemeler" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/K-NN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
-          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Linear-Regression.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
@@ -410,8 +394,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Lagrange-Multiplier.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="28" lean-forward="true" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/K-Means.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="55" column="18" lean-forward="true" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/K-NN.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="84" lean-forward="true" selection-start-line="8" selection-start-column="84" selection-end-line="8" selection-end-column="84" />
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
         </state>
       </provider>
     </entry>
