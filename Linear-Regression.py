@@ -23,12 +23,12 @@ def carpma(dizi):
 def yazdirToplam(carp, top):
     print("\t\t\nX^2 VE X*Y İLE TOPLAMLARIN HESABI:")
     print("----------------------------------\n")
-    print("\t\t\tX\t\t\tY\t\t\tX^2\t\t\tX*Y")
+    print("\t\t\t{:<10}{:<10}{:<10}{}".format("X","Y","X^2","X*Y"))
     print("  \t\t-------------------------------------------")
     for eleman in carp:
-        print("\t\t\t{}\t\t\t{}\t\t\t{}\t\t\t{}".format(eleman[0],eleman[1],eleman[2],eleman[3]))
+        print("\t\t\t{:<10}{:<10}{:<10}{}".format(eleman[0],eleman[1],eleman[2],eleman[3]))
     print("\t\t+.............................................")
-    print("Toplam:\t\t{}\t\t\t{}\t\t\t{}\t\t\t{}".format(top[0], top[1], top[2], top[3]))
+    print("Toplam:\t\t{:<10}{:<10}{:<10}{}".format(top[0], top[1], top[2], top[3]))
 
 def egim(N, toplam):
     m = round(((N*toplam[3]) - (toplam[0]*toplam[1])) / ((N*toplam[2]) - (toplam[0])**2),4)
@@ -59,11 +59,11 @@ def hatalar(m, b, dizi):
 
 def yazdirHatalar(dizi):
     print("\n\nHATA HESABI:")
-    print("---------------------------------------------------\n")
-    print("\tX\t\tY\t\ty={}x+{}\t\tHata".format(m,b))
-    print("  -------------------------------------------------")
+    print("___________________________________________________\n")
+    print("{:<10}{:<10}y={}x+{}{:>15}".format("X","Y",m,b,"Hata"))
+    print("---------------------------------------------------")
     for eleman in dizi:
-        print("\t{}\t\t{}\t\t{}\t\t\t\t\t{}".format(eleman[0],eleman[1],eleman[4],eleman[5]))
+        print("{:<10}{:<10}{:<25}{}".format(eleman[0],eleman[1],eleman[4],eleman[5]))
 
 
 def denklemHesabi(m, b, x):
@@ -89,4 +89,3 @@ denklemHesabi(m, b, x)
 
 hataliDizi = hatalar(m, b, dizi)
 yazdirHatalar(hataliDizi)
-

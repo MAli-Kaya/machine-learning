@@ -93,13 +93,13 @@ def kDegerleriniEkle(veriler,kDegerleri,K):
         veriler[k[4]][5] = i+1
     print("\nHesaplar tamamlandıktan sonra k={} olduğundan dolayı en küçük değerden başlayarak {} değer alınır.\n"
           .format(K,K))
-    print("\tx\t\ty\t\tf(x,y)\t\tÖklid\t\tk")
-    print("  ---------------------------------------------")
+    print("x\t\ty\t\tf(x,y)\t\tÖklid\t  k")
+    print("---------------------------------------------")
     for i,v in enumerate(veriler):
         if v[5] != 0 :
-            print("\t{}\t\t{}\t\t{}\t\t\t{}\t\t{}*".format(v[0], v[1], v[2], v[3], v[5]))
+            print("{:<8}{:<10}{:<10}{:<10}{}*".format(v[0], v[1], v[2], v[3], v[5]))
         else:
-            print("\t{}\t\t{}\t\t{}\t\t\t{}".format(v[0], v[1], v[2], v[3]))
+            print("{:<8}{:<10}{:<10}{:<10}".format(v[0], v[1], v[2], v[3]))
 kDegerleri = kDegerleriniBul(veriler,k)
 kDegerleriniEkle(veriler,kDegerleri,k)
 
