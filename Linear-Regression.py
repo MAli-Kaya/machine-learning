@@ -1,11 +1,11 @@
 # vize sorusu
 # dizi = [[100,110], [110,130], [140,150], [150,160], [200,180]]
 # x= 175 (istenen değeri unuttum)
-
+"""
 # ders videosundaki örnek soru
 dizi = [[2,4], [3,5], [5,7], [7,10], [9,15]] # verilen x ve y değerleri format: [[x1,y1],[x2,y2],...,[xn,yn]]
 x = 8 # istenen değer
-
+"""
 def toplama(dizi):
     toplam = [0,0,0,0]
     for eleman in dizi:

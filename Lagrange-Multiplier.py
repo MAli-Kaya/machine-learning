@@ -14,16 +14,16 @@ g = x**2 + y**2 - 5
 
 """
 
-#Final Sorusu
-f = x**2 + 4*y**2 - 2*x + 8*y
-g = x + 2*y - 7
+#büt Sorusu
+f = 4*x**2 + 3*x*y + 6*y**2
+g = x + y - 56
 
 def lagrangeFonk(f,g):
     #L0 = f - λ * g
     L = (f - λ * g).expand()
     print("\nLagrange Formülü:\nL = f(x,y) + λ*g(x,y)\n")
     print("Lagrange Denklemi:")
-    pprint(L)
+    pprint("{} + λ*( {} )".format(f,g))
     print("\n-------------------------------------------")
     return L
 

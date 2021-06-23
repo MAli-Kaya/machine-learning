@@ -18,7 +18,7 @@ siniflandirilacakOrnek = ["kırmızı","SUV","yerli"]
 kararDegeri1 = "evet"
 kararDegeri2 = "hayır"
 
-"""
+
 # pdf deki örnek soru:
 veri = [["güneşli","sıcak","yüksek","zayıf","hayır"],
         ["güneşli","sıcak","yüksek","şiddetli","hayır"],
@@ -41,6 +41,22 @@ siniflandirilacakOrnek = ["yağmurlu","sıcak","yüksek","zayıf"]
 
 kararDegeri1 = "evet"
 kararDegeri2 = "hayır"
+"""
+# büt soru:
+veri = [["miyav","kaba","kahverengi","köpek"],
+        ["hav","ince","kahverengi","köpek"],
+        ["hav","kaba","siyah","köpek"],
+        ["hav","kaba","siyah","köpek"],
+        ["miyav","ince","kahverengi","kedi"],
+        ["miyav","kaba","siyah","kedi"],
+        ["hav","ince","siyah","kedi"],
+        ["hav","ince","kahverengi","kedi"]]
+
+sinifAdlari = ["ses","kürk","renk","sınıf"]
+siniflandirilacakOrnek = ["hav","kaba","kahverengi"]
+
+kararDegeri1 = "köpek"
+kararDegeri2 = "kedi"
 
 def frekansiVeOlasiliklariYaz(k1,k2,sinifAdlari,frekansAd,f1,f2):
     frekansAdNoLastEleman = frekansAd.copy()
@@ -142,6 +158,6 @@ float2 = round(convert_to_float(k2olasilik),4)
 print("\t\t  =",float2,end="\n\n")
 
 if float1 > float2:
-    print("{} > {} olduğu için özellik \"{}\" olarak sınıflandırılır.".format(float1,float2,kararDegeri1))
+    print("{} > {} olduğu için örnek \"{}\" olarak sınıflandırılır.".format(float1,float2,kararDegeri1))
 else:
-    print("{} > {} olduğu için özellik \"{}\" olarak sınıflandırılır.".format(float2, float1, kararDegeri2))
+    print("{} > {} olduğu için örnek \"{}\" olarak sınıflandırılır.".format(float2, float1, kararDegeri2))
